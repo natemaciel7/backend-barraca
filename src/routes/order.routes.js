@@ -4,8 +4,7 @@ import autenticarToken from "../middlewares/authMiddleware.js";
 
 const router = Router();
 
-router.post("/", criarPedido);
-router.get("/", listarPedidos); // para a Jura ver os pedidos no painel
 router.post("/", autenticarToken, criarPedido);
+router.get("/", listarPedidos);
 
 export default router;
